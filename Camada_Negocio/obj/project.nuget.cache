@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "BHbhBOVhnelN2CtTdgsYQI1atEpje5LEu/Y1Z+pbj4djXQ+YAoen2cPq0V8X1u9KBQcZdavS2g6zkMhGT+mYRg==",
+  "dgSpecHash": "mGj0DTqD26dLhiZuGLyjkWO86eqqwwWUzBmnQf0rxllk0ZcGsQjNkdH7mNlQVUi+ZZgPaUMG7F+EA2UvIkyORg==",
   "success": true,
   "projectFilePath": "C:\\Dev\\Curso WebAPI\\APICompleta\\TesteAPI_Completa\\Camada_Negocio\\Camada_Negocio.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\marcel.santana\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\marcel.santana\\.nuget\\packages\\automapper\\8.0.0\\automapper.8.0.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authentication.core\\2.2.0\\microsoft.aspnetcore.authentication.core.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.authorization\\2.2.0\\microsoft.aspnetcore.authorization.2.2.0.nupkg.sha512",
@@ -23,7 +23,7 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
     "C:\\Users\\marcel.santana\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\marcel.santana\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
-    "C:\\Users\\marcel.santana\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\marcel.santana\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\marcel.santana\\.nuget\\packages\\microsoft.data.sqlclient\\1.0.19269.1\\microsoft.data.sqlclient.1.0.19269.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.dotnet.platformabstractions\\2.1.0\\microsoft.dotnet.platformabstractions.2.1.0.nupkg.sha512",
     "C:\\Users\\marcel.santana\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.30\\microsoft.entityframeworkcore.3.1.30.nupkg.sha512",

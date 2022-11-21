@@ -12,14 +12,11 @@ namespace Camada_Negocio
     {
         private Camada_Dados.AlunoCD _CD;
         private readonly IMapper _mapper;
-        public AlunoCN()
-        {
-            _CD = new Camada_Dados.AlunoCD();
-        }
 
         public AlunoCN(IMapper mapper)
         {
             _mapper = mapper;
+            _CD = new Camada_Dados.AlunoCD();
         }
 
         public AlunoModel AlunosPorID(int Id)

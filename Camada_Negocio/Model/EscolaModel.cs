@@ -9,7 +9,7 @@ namespace Camada_Negocio.Model
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Email { get; set; }
-        public long CNPJ { get; set; }
+        public string CNPJ { get; set; }
 
     }
 }

@@ -1,16 +1,18 @@
 ﻿using Camada_Negocio.Model;
 using AutoMapper;
 using Camada_Dados.Repository.Entity;
+using Camada_Negocio.Configuration;
 
 namespace Web_Api.Configuration
 {
-    public class AutoMapperConfig : Profile
+    public class AutoMapperConfig
     {
-        public AutoMapperConfig()
+        public static MapperConfiguration RegisterMappings()
         {
-            CreateMap<Aluno, AlunoModel>().ReverseMap();
-            CreateMap<Escola, EscolaModel>().ReverseMap();
-            CreateMap<Professor, ProfessorModel>().ReverseMap();
+            return new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new MappingProfile());
+            });
         }
     }
 }

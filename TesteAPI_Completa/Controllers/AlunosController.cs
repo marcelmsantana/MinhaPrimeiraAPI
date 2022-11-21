@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TesteAPI_Completa.Data;
 using Camada_Negocio.Model;
+using AutoMapper;
 
 namespace Web_Api.Controllers
 {
@@ -14,11 +15,12 @@ namespace Web_Api.Controllers
     [ApiController]
     public class AlunosController : Controller
     {
-        private AlunoCN _CN;
+        private readonly AlunoCN _CN;
+        private readonly IMapper _mapper;
 
-        public AlunosController()
+        public AlunosController(IMapper mapper)
         {
-            _CN = new AlunoCN();
+            _CN = new AlunoCN(mapper);
         }
 
         [HttpGet("{Id:int}")]
@@ -38,7 +40,17 @@ namespace Web_Api.Controllers
         [HttpGet("todos")]
         public List<AlunoModel> MostrarAlunos()
         {
-            return _CN.MostrarAlunos();
+            try
+            {
+                return _CN.MostrarAlunos();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            
+
         }
 
         [HttpPost("salvar")]

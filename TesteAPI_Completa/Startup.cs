@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using TesteAPI_Completa.Data;
 using Microsoft.EntityFrameworkCore.Design;
 using AutoMapper;
+using Web_Api.Configuration;
 
 namespace Web_Api
 {
@@ -26,6 +27,7 @@ namespace Web_Api
                options.UseSqlServer(Configuration.GetConnectionString(name: "MeuDbContext")));
 
             services.AddAutoMapper(typeof(Startup));
+            AutoMapperConfig.RegisterMappings();
 
             services.AddControllers();
 
