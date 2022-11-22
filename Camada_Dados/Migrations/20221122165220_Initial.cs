@@ -34,7 +34,7 @@ namespace Camada_Dados.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nome = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
-                    CNPJ = table.Column<long>(nullable: false)
+                    CNPJ = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -51,7 +51,7 @@ namespace Camada_Dados.Migrations
                     Sobrenome = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     DataNascimento = table.Column<DateTime>(nullable: false),
-                    CPF = table.Column<long>(nullable: false),
+                    CPF = table.Column<string>(nullable: true),
                     Ativo = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>

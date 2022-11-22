@@ -1,10 +1,12 @@
 ﻿using Camada_Dados;
+using Camada_Dados.MER_Config;
 using Camada_Dados.Repository.Entity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+
 
 namespace TesteAPI_Completa.Data
 {
@@ -25,7 +27,16 @@ namespace TesteAPI_Completa.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
-            optionBuilder.UseSqlServer("Data Source=TECFY29;Initial Catalog=EnglishClasses;Integrated Security=True");
+            optionBuilder.UseSqlServer("Data Source=TECFY29;Initial Catalog=TesteAPI_Completa;Integrated Security=True");
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new EscolaConfig());
+            modelBuilder.ApplyConfiguration(new ProfessorConfig());
+            modelBuilder.ApplyConfiguration(new AlunoConfig());
         }
     }
 }

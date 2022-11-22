@@ -34,5 +34,8 @@ namespace Camada_Dados.Repository.Entity
         public string Nivel { get; set; }
 
         public bool Ativo { get; set; }
+        public Escola Escola { get; set; }
+        public Professor Professor { get; set; }
+
     }
 }

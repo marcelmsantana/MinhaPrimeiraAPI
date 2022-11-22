@@ -40,21 +40,11 @@ namespace Web_Api.Controllers
         [HttpGet("todos")]
         public List<AlunoModel> MostrarAlunos()
         {
-            try
-            {
-                return _CN.MostrarAlunos();
-            }
-            catch (Exception ex)
-            {
-
-                throw ex;
-            }
-            
-
+            return _CN.MostrarAlunos();
         }
 
         [HttpPost("salvar")]
-        public void SalvarAluno(Aluno aluno)
+        public Aluno SalvarAluno(Aluno aluno)
         {
             try
             {
@@ -65,7 +55,7 @@ namespace Web_Api.Controllers
                 BadRequest(ex.Message);
                 throw;
             }
-            
+            return aluno;
         }
 
         [HttpDelete("deletar/{Id:int}")]

@@ -14,7 +14,9 @@ namespace Camada_Dados.Repository.Entity
 
         [EmailAddress]
         public string Email { get; set; }
-        public long CNPJ { get; set; }
+        public string CNPJ { get; set; }
+        public List<Professor> Professores { get; set; }
+        public List<Aluno> Alunos { get; set; }
 
     }
 }

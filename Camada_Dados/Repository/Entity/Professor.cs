@@ -16,7 +16,10 @@ namespace Camada_Dados.Repository.Entity
         [EmailAddress]
         public string Email { get; set; }
         public DateTime DataNascimento { get; set; }
-        public long CPF { get; set; }
+        public string CPF { get; set; }
         public bool Ativo { get; set; }
+        public List<Aluno> Alunos { get; set; }
+        public List<Escola> Escolas { get; set; }
+
     }
 }

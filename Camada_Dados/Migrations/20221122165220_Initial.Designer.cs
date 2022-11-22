@@ -10,7 +10,7 @@ using TesteAPI_Completa.Data;
 namespace Camada_Dados.Migrations
 {
     [DbContext(typeof(MeuDbContext))]
-    [Migration("20221122143609_Initial")]
+    [Migration("20221122165220_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -66,8 +66,8 @@ namespace Camada_Dados.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<long>("CNPJ")
-                        .HasColumnType("bigint");
+                    b.Property<string>("CNPJ")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
                         .HasColumnType("nvarchar(max)");
@@ -90,8 +90,8 @@ namespace Camada_Dados.Migrations
                     b.Property<bool>("Ativo")
                         .HasColumnType("bit");
 
-                    b.Property<long>("CPF")
-                        .HasColumnType("bigint");
+                    b.Property<string>("CPF")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("DataNascimento")
                         .HasColumnType("datetime2");
