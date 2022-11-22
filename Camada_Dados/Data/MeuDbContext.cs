@@ -25,7 +25,7 @@ namespace TesteAPI_Completa.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
         {
-            optionBuilder.UseSqlServer("Data Source=TECFY29;Initial Catalog=Test_EnglishClasses;Integrated Security=True");
+            optionBuilder.UseSqlServer("Data Source=TECFY29;Initial Catalog=EnglishClasses;Integrated Security=True");
         }
     }
 }

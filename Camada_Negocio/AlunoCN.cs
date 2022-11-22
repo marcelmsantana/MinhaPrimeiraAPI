@@ -5,10 +5,11 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
 using Camada_Negocio.Model;
+using Camada_Negocio.Interfaces;
 
 namespace Camada_Negocio
 {
-    public class AlunoCN
+    public class AlunoCN : IAluno
     {
         private Camada_Dados.AlunoCD _CD;
         private readonly IMapper _mapper;
@@ -17,6 +18,16 @@ namespace Camada_Negocio
         {
             _mapper = mapper;
             _CD = new Camada_Dados.AlunoCD();
+        }
+
+        public void RealizarProva()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ProximoNivel()
+        {
+            throw new NotImplementedException();
         }
 
         public AlunoModel AlunosPorID(int Id)
@@ -35,7 +46,7 @@ namespace Camada_Negocio
         {
             if (aluno.Nome == string.Empty) throw new Exception("Por favor, insira o nome do aluno.");
             if (aluno.Nome.Length <= 1) throw new Exception("Nome inválido.");
-            if (aluno.DataNascimento.AddYears(18) < DateTime.Now) throw new Exception("Você precisa de um responsável para a realização do cadastro.");
+            if (aluno.DataNascimento.AddYears(18) > DateTime.Now) throw new Exception("Você precisa de um responsável para a realização do cadastro.");
             if (aluno.Sobrenome == string.Empty) throw new Exception("Por favor, insira seu sobrenome.");
 
             _CD.SalvarAluno(aluno);

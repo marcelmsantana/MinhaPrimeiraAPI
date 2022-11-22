@@ -28,7 +28,7 @@ namespace Camada_Dados.Repository.Entity
         public DateTime DataNascimento { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório.")]
-        public long CPF { get; set; }
+        public string CPF { get; set; }
 
         [Display(Name = "Nível do aluno")]
         public string Nivel { get; set; }
